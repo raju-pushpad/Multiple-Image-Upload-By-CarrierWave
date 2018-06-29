@@ -1,0 +1,9 @@
+<%= form_for @user, url: {action: "create"} do |f| %>
+	<%= f.label :name %>
+	<%= f.text_field :name %><br/>
+<%= f.fields_for :profile do |p| %>
+<%= p.label :image %>
+<%= p.file_field :image , multiple:true%><br/>
+<% end %>
+<%= f.submit %>
+<% end %>

@@ -1,0 +1,17 @@
+<%= demo %> <br/>
+<div class="container">
+	<% @data.profiles.each do |image| %>
+		<div class="row">
+		<div class="col-8">
+		   <%= xyz(image) %>
+		   <% if @data.profiles %>
+		   <% end %> 
+		</div>
+		<div class="col-4">
+		<%= link_to "delete", welcome_path(image.id), method: :DELETE %>
+		</div>
+		</div>
+<% end %>
+</div>
+
+<!-- find_each(batch_size: 4) -->
